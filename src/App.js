@@ -8,14 +8,10 @@ import HomePage from './pages/HomePage';
 import ErrorPage from './pages/ErrorPage';
 
 function App() {
-  function sumMixedValuesArray(arr) {
-    return arr.map(e => (typeof e === 'number') ? e : 0).reduce((acc, val) => acc + val)
-  }
-  
-
+ 
   const location = useLocation();
   const routes = [
-    { path: '/', element: <HomePage  sumMixedValuesArray={sumMixedValuesArray} />, name: 'Home' },
+    { path: '/', element: <HomePage />, name: 'Home' },
     // { path: '/second', element: <SecondPage sumMixedValuesArray={sumMixedValuesArray}/>, name: 'Home' },
    
     { path: '/*', element: <ErrorPage />, name: '404' },
