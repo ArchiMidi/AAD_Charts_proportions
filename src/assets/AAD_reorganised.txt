@@ -2,7 +2,7 @@
 `Fondazione Prada,Milano,exhibitions,x,x,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,4,3,8,7,0,1,,69,11,`,
 `PAC,Milano,exhibitions,x,x,0,0,0,1,0,6,0,0,0,0,x,x,x,8,0,0,8,25,2,5,0,x,,59,,`,
 `Bicocca,Milano,exhibitions,x,x,x,x,x,x,x,0,0,0,0,0,2,2,0,0,0,0,0,3,0,0,0,x,,59,,`,
-`MAXXI,Roma,exhibitions,x,x,x,x,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,44,7,0,x,,271,,`,
+`BOBBY,Roma,exhibitions,x,x,x,x,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,44,7,0,x,,271,,`,
 `MACRO,Roma,"exhibitions, events, residencies",x,x,x,x,x,x,x,0,0,1,0,0,2,0,3,1,0,0,1,0,0,1,x,x,,346,,346`,
 `Palazzo delle Esposizioni,Roma,exhibitions,x,x,2,0,0,x,x,x,x,0,0,0,0,0,0,2,0,0,0,0,0,0,0,x,,192,,`,
 `MADRE,Napoli,exhibitions,x,x,x,x,x,x,x,x,0,0,0,1,0,0,0,0,0,0,0,1,1,0,1,x,,97,,`,

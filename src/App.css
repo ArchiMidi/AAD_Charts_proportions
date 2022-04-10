@@ -1,10 +1,37 @@
 :root {
-  --color-one: rgba(89, 77, 21, 0.3);
-  --color-two: rgba(139, 110, 33, 0.3);
-  --color-three: rgba(216, 176, 71, 0.3);
-  --color-four: rgba(128, 52, 47, 0.3);
-  --color-four-transp: hsla(4, 46%, 34%, 0.3);
-  --color-five: rgb(13, 13, 13);
   --unit: 3.5rem;
   --little-border: 0.001rem
+}
+
+.chartContainer{
+  font-family: monospace;
+  background-color: aliceblue;
+  border: 1px solid black;
+  display: grid;
+  column-gap: 0.1rem;
+  row-gap: 0.1rem;
+}
+
+.homeContainer{
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+}
+
+.placeName{
+  align-self: center;
+  color: rgb(84, 20, 20)
+}
+
+
+.placeArea{
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+ width: 100%;
+ /* border-radius: 1rem; */
 }

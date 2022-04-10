@@ -22,7 +22,7 @@ const data = [`,,,,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2
     `SRISA Gallery,Firenze,exhibitions,x,x,x,x,x,x,x,x,x,x,x,1,0,0,2,1,1,0,0,0,3,5,3,x,,71,,`,
     `BASE,Firenze,exhibitions,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,72,,`,]
 
-export default function dataMap() {
+export default function mapArr() {
     let array = data.map(el => CSVToArray(el)).map(el => el[0]).map(((line, lineIndex) => line.map((entry, index) => lineIndex !== 0 ? (Number(entry) || (entry === '0' ? 0 : entry)) : entry)));
     array.shift()
     // console.log('ARRAY:', array)
