@@ -1,8 +1,8 @@
-import data from "../utils/dataArray"
+import dataMap from "../utils/dataMap"
 
 export default function HomePage() {
-const d = data()
-console.log(d)
+const data = dataMap()
+console.log(data)
   return (
     <div className="home">
       <p>HomePage</p>

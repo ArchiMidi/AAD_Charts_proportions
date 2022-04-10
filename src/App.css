@@ -1,13 +1,10 @@
 :root {
-  --color-one: rgb(89, 77, 21);
-  --color-two: rgb(139, 110, 33);
-  --color-three: rgb(216, 176, 71);
-  --color-four: rgb(128, 52, 47);
-  --color-four-transp: rgba(128, 52, 47, 0.3);
+  --color-one: rgba(89, 77, 21, 0.3);
+  --color-two: rgba(139, 110, 33, 0.3);
+  --color-three: rgba(216, 176, 71, 0.3);
+  --color-four: rgba(128, 52, 47, 0.3);
+  --color-four-transp: hsla(4, 46%, 34%, 0.3);
   --color-five: rgb(13, 13, 13);
-  --small-padding: 10px;
-  --block-size: 0.1rem;
   --unit: 3.5rem;
-  --margin-unit: 0rem;
   --little-border: 0.001rem
 }
