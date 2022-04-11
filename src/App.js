@@ -1,18 +1,20 @@
 import './App.css';
+import dataMap from './utils/dataMap'
 import { useEffect, useState } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 
 import HomePage from './pages/HomePage';
+import SecondPage from './pages/SecondPage';
 import ErrorPage from './pages/ErrorPage';
 
 function App() {
- 
+ const data = dataMap()
   const location = useLocation();
   const routes = [
-    { path: '/', element: <HomePage />, name: 'Home' },
-    // { path: '/second', element: <SecondPage sumMixedValuesArray={sumMixedValuesArray}/>, name: 'Home' },
+    { path: '/', element: <HomePage data={data}/>, name: 'Home' },
+    { path: '/second', element: <SecondPage data={data}/>, name: 'PageTwo' },
    
     { path: '/*', element: <ErrorPage />, name: '404' },
   ]

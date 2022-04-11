@@ -7,11 +7,11 @@ function pickColor(value) {
     if (true) return 'hsla(0, 0%, 80%, 1)'
     if (value === 0) return `hsl(0, 50%, 80%)`
     if (value <= 1) return 'hsl(30, 80%, 80%)'
-    if (value <= 3) return`hsl(40, 80%, 80%)`
-    if (value <= 5) return`hsl(50, 80%, 80%)`
-    if (value <= 15) return`hsl(60, 80%, 80%)`
-    if (value <= 25) return`hsl(100, 80%, 80%)`
-    if (value <= 50  ) return`hsl(120, 80%, 80%)`
+    if (value <= 3) return `hsl(40, 80%, 80%)`
+    if (value <= 5) return `hsl(50, 80%, 80%)`
+    if (value <= 15) return `hsl(60, 80%, 80%)`
+    if (value <= 25) return `hsl(100, 80%, 80%)`
+    if (value <= 50) return `hsl(120, 80%, 80%)`
     return `#ffffff`
 }
 export default function Chart(props) {
@@ -59,7 +59,7 @@ export default function Chart(props) {
                             }}
                             className='placeArea'
                         >
-                            <YearCard value={value}/>
+                            {value}
                         </div>
                     )
                 }

@@ -47,3 +47,8 @@
  /* border-left: 0.1rem solid black; */
    /* border-radius: 1rem; */
 }
+
+.yearCard{
+  display: flex;
+  flex-direction: column
+}

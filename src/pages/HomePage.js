@@ -1,9 +1,9 @@
 import Chart from "../components/Chart"
-import dataMap from "../utils/dataMap"
 
-export default function HomePage() {
-const data = dataMap()
-console.log(data)
+
+export default function HomePage(props) {
+const {data} = props
+
   return (
     <div className="homeContainer">
     <h1>AAD_Presence</h1>
