@@ -1,6 +1,10 @@
 import React from 'react'
+import YearCard from './YearCard'
+
 function pickColor(value) {
-    if (typeof value !== 'number') return 'hsl(0, 0%, 80%)'
+    //
+    if (typeof value !== 'number') return 'hsla(0, 0%, 80%, 0)'
+    if (true) return 'hsla(0, 0%, 80%, 1)'
     if (value === 0) return `hsl(0, 50%, 80%)`
     if (value <= 1) return 'hsl(30, 80%, 80%)'
     if (value <= 3) return`hsl(40, 80%, 80%)`
@@ -15,10 +19,10 @@ export default function Chart(props) {
     const dataArr = [...data]
 
     const gridColumns = () => {
-        return dataArr[0][1].yearsValues.map((el, i) => i === 0 ? '4fr' : '3rem ').join('') + '1fr'
+        return 'min-content ' + dataArr[0][1].yearsValues.map((el, i) => '1fr ').join('')
     }
     const gridRows = () => {
-        return dataArr.map((el, i) => '3rem ').join('')
+        return dataArr.map((el, i) => '1fr ').join('')
     }
 
     return (
@@ -55,7 +59,7 @@ export default function Chart(props) {
                             }}
                             className='placeArea'
                         >
-                            {/* {value} */}
+                            <YearCard value={value}/>
                         </div>
                     )
                 }
