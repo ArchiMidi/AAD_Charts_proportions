@@ -1,13 +1,13 @@
 import React from 'react'
 function pickColor(value) {
-    if (typeof value !== 'number') return 'hsl(0, 0%, 60%)'
-    if (value === 0) return `hsl(0, 20%, 80%)`
-    if (value <= 1) return 'hsl(60, 40%, 80%)'
-    if (value <= 3) return`hsl(60, 70%, 80%)`
-    if (value <= 5) return`hsl(60, 70%, 70%)`
-    if (value <= 15) return`hsl(60, 70%, 60%)`
-    if (value <= 25) return`hsl(80, 100%, 50%)`
-    if (value <= 50  ) return`hsl(100, 100%, 50%)`
+    if (typeof value !== 'number') return 'hsl(0, 0%, 80%)'
+    if (value === 0) return `hsl(0, 50%, 80%)`
+    if (value <= 1) return 'hsl(30, 80%, 80%)'
+    if (value <= 3) return`hsl(40, 80%, 80%)`
+    if (value <= 5) return`hsl(50, 80%, 80%)`
+    if (value <= 15) return`hsl(60, 80%, 80%)`
+    if (value <= 25) return`hsl(100, 80%, 80%)`
+    if (value <= 50  ) return`hsl(120, 80%, 80%)`
     return `#ffffff`
 }
 export default function Chart(props) {
