@@ -14,15 +14,6 @@ export default function FourthPage(props) {
         return dataArr.map((el, i) => '1fr ').join('')
     }
 
-
-    function pickColor(value) {
-        //
-        if (typeof value !== 'number') return 'hsla(0, 0%, 80%, 0)'
-        // if (true) return 'hsla(0, 0%, 80%, 1)'
-        if (value === 0) return `hsl(0, 50%, 80%)`
-        return 'hsl(0, 50)'
-    }
-
     return (
         <div className='fourthContainer' >
             <h3>AAD_CHART</h3>

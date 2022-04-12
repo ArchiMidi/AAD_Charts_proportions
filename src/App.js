@@ -8,7 +8,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import HomePage from './pages/HomePage';
 import SecondPage from './pages/SecondPage';
 import ThirdPage from './pages/ThirdPage';
-import FourthPage from './pages/FourthPage';
+import BarGraph from './pages/BarGraph';
 import ErrorPage from './pages/ErrorPage';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
     { path: '/', element: <HomePage data={data}/>, name: 'Home' },
     { path: '/second', element: <SecondPage data={data}/>, name: 'PageTwo' },
     { path: '/third', element: <ThirdPage data={data}/>, name: 'PageThree' },
-    { path: '/fourth', element: <FourthPage dataArr={[...data]}/>, name: 'PageFour' },
+    { path: '/bars', element: <BarGraph dataArr={[...data]}/>, name: 'PageFour' },
    
     { path: '/*', element: <ErrorPage data={data}/>, name: '404' },
   ]
