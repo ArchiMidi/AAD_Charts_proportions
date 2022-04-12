@@ -3,7 +3,7 @@ import TrianglesYearsLine from '../components/TrianglesYearsLine'
 import { ReactComponent as Triangle } from "../assets/triangle.svg"
 
 
-export default function SecondPage(props) {
+export default function InlineTriangles(props) {
   function calculateTriangleSide(area) {
     return Math.sqrt(4 * area / 1.7320508075688772) * 10
   }
@@ -37,22 +37,24 @@ export default function SecondPage(props) {
               return typeof value === 'number' ?
                <Triangle
                 key={name + value + i}
-                width={calculateTriangleSide(value)}
+                width={(value !== 0 ? calculateTriangleSide(value) : 10)}
                 style={{
                   position: 'absolute',
                   left: `${i * 3 + 5}rem`,
                   borderLeft: '1px solid pink',
-                  bottom: '0rem',
+                  bottom: (value !== 0 ? "0rem" : -10),
                   stroke: 'white',
                   strokeWidth: '0.08rem',
                   strokeLinejoin: 'round',
+                  fill: value === 0 && "red",
+                  transform: value === 0 && 'scaleY(-1)'
                   
                 }}
               /> : <p  style={{position: 'absolute',
                   left: `${i * 3 + 5}rem`,
                   alignText: "left",
                   borderLeft: '1px solid red',}}>
-                  x
+                  {/* x */}
                   </p>
             })}
           </div>

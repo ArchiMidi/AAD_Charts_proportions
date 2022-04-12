@@ -1,6 +1,6 @@
 import Chart from "../components/Chart"
 
-export default function HomePage(props) {
+export default function Calendar(props) {
 const {data} = props
 
   return (
