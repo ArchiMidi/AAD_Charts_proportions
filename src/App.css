@@ -61,3 +61,21 @@
   border: 1px solid red;
 }
 
+/* ----------------------FOURTH---------------------- */
+.fourthContainer{
+  width: 100vw;
+  height: calc(2rem + 1.41421356237 * 100vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid red;
+}
+
+.chartContainerPageFour{
+  display: grid;
+  width: 96vw;
+  height: calc(1.41421356237 * 96vw);
+  border: 1px solid pink;
+}
+
