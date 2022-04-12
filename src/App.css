@@ -44,11 +44,25 @@
   height: 100%;
   width: 100%;
   /* border-bottom: 0.1rem solid black; */
- /* border-left: 0.1rem solid black; */
-   /* border-radius: 1rem; */
+  /* border-left: 0.1rem solid black; */
+  /* border-radius: 1rem; */
 }
 
-.yearCard{
-  display: flex;
-  flex-direction: column
+/* ------------SECOND PAGE------------ */
+/* ------------SECOND PAGE------------ */
+/* ------------SECOND PAGE------------ */
+/* ------------SECOND PAGE------------ */
+
+.secondContainer {
+  width: 100rem;
+  height: 100rem;
+  background-color: aliceblue;
+  border: 1px solid red;
+}
+
+.yearCard {
+  position: absolute;
+  height: 10rem;
+  width: 100rem;
+  border: 1px solid blue;
 }

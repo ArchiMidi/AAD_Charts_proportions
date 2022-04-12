@@ -1,5 +1,4 @@
 import React from 'react'
-import YearCard from './YearCard'
 
 function pickColor(value) {
     //

@@ -16,7 +16,7 @@ function App() {
     { path: '/', element: <HomePage data={data}/>, name: 'Home' },
     { path: '/second', element: <SecondPage data={data}/>, name: 'PageTwo' },
    
-    { path: '/*', element: <ErrorPage />, name: '404' },
+    { path: '/*', element: <ErrorPage data={data}/>, name: '404' },
   ]
   return (
     <div className={"App "}>

@@ -1,6 +1,5 @@
 import Chart from "../components/Chart"
 
-
 export default function HomePage(props) {
 const {data} = props
 
