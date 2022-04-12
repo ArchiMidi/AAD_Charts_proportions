@@ -67,9 +67,9 @@ export default function Chart(props) {
                             {value}
                         </div>
                     )
-                }
-                )
+                })
             })}
+
         </div>
     )
 }

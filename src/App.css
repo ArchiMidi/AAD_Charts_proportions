@@ -79,3 +79,19 @@
   border: 1px solid pink;
 }
 
+.placeNameFourth{
+  display: flex;
+  text-align: center;
+  /* align-items: center; */
+  /* justify-items: center; */
+  justify-content: center;
+  align-items: center;
+  color: red;
+  border: 1px solid lightblue
+}
+
+.placeNameFourth p {
+  max-width: 80%;
+  background-color: beige;
+}
+
