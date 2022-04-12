@@ -54,15 +54,10 @@
 /* ------------SECOND PAGE------------ */
 
 .secondContainer {
+  /* margin: 10rem; */
   width: 100rem;
   height: 100rem;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   border: 1px solid red;
 }
 
-.yearCard {
-  position: absolute;
-  height: 10rem;
-  width: 100rem;
-  border: 1px solid blue;
-}

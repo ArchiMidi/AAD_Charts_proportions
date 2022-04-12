@@ -7,6 +7,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import HomePage from './pages/HomePage';
 import SecondPage from './pages/SecondPage';
+import ThirdPage from './pages/ThirdPage';
 import ErrorPage from './pages/ErrorPage';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   const routes = [
     { path: '/', element: <HomePage data={data}/>, name: 'Home' },
     { path: '/second', element: <SecondPage data={data}/>, name: 'PageTwo' },
+    { path: '/third', element: <ThirdPage data={data}/>, name: 'PageThree' },
    
     { path: '/*', element: <ErrorPage data={data}/>, name: '404' },
   ]

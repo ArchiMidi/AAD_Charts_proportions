@@ -27,6 +27,7 @@ export default function mapArr() {
     array.shift()
     // console.log('ARRAY:', array)
     let mapped = new Map();
+        console.log(mapped)
 
     for (let line of array) {
         const yearsValues = line.filter((el, i) => i >= 3 && i < 27);

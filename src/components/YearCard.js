@@ -10,30 +10,28 @@ export default function YearCard(props) {
 
     return (
         <div className='yearCard'
-        style={{top: `${index * 3} rem`}}>
+            style={{ position: 'absolute', top: `${index * 30} rem`, height:'10rem', width: '30rem'}}>
             {info.yearsValues.map((yearValue, i) => {
-                if (typeof yearValue === 'number') {
+                return <div key={i + name + yearValue}>
+                    {typeof yearValue === 'number' &&
+                        <Triangle key={name + yearValue + i}
+                            className='triangle'
+                            style={{
+                                // position: 'absolute',
+                                width: `${calculateTriangleSide(yearValue)}`,
+                                fill: 'hsl(43, 65%, 56%)',
+                                stroke: 'black',
+                                strokeWidth: '0.08rem',
+                                strokeLinejoin: 'round',
+                                // left: `${10 * i}rem`,
+                                // top: `10rem`
 
-                    return <div key={i + name + yearValue}>
-                        {
-                            <Triangle key={name + yearValue + i}
-                                className='triangle'
-                                style={{
-                                    // position: 'absolute',
-                                    width: `${calculateTriangleSide(yearValue)}`,
-                                    fill: 'hsl(43, 65%, 56%)',
-                                    stroke: 'black',
-                                    strokeWidth: '0.08rem',
-                                    strokeLinejoin: 'round',
-                                    // left: `${10 * i}rem`,
-                                    // top: `10rem`
+                            }} />
+                    }
+                </div>
+            }
 
-                                }} />
-                        }
-                    </div>
-                }
-
-            })}
+            )}
         </div>
     )
 }
