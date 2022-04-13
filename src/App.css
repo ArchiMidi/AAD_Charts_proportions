@@ -62,7 +62,7 @@
 }
 
 /* ----------------------FOURTH---------------------- */
-.fourthContainer{
+.BarsPageContainer {
   width: 100vw;
   height: calc(2rem + 1.41421356237 * 100vw);
   display: flex;
@@ -72,26 +72,26 @@
   border: 1px solid red;
 }
 
-.chartContainerPageFour{
+.BarChartContainer {
   display: grid;
   width: 96vw;
   height: calc(1.41421356237 * 96vw);
   border: 1px solid pink;
 }
 
-.placeNameFourth{
+.BarChartPlaceName {
   display: flex;
+  flex-direction: column;
   text-align: center;
   /* align-items: center; */
   /* justify-items: center; */
   justify-content: center;
   align-items: center;
-  color: red;
-  border: 1px solid lightblue
+  border: 1px solid lightblue;
 }
 
-.placeNameFourth p {
+.BarChartPlaceName p {
+  color: hsl(200, 40%, 30%);
+  margin: 0.1rem;
   max-width: 80%;
-  background-color: beige;
 }
-

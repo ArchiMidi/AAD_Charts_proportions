@@ -7,7 +7,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Calendar from './pages/Calendar';
 import InlineTriangles from './pages/InlineTriangles';
-import ThirdPage from './pages/InlineTriangles';
+import SecondPage from './pages/SecondPage';
 import BarGraph from './pages/BarGraph';
 import ErrorPage from './pages/ErrorPage';
 
@@ -16,9 +16,9 @@ function App() {
   const location = useLocation();
   const routes = [
     { path: '/', element: <Calendar data={data}/>, name: 'Home' },
-    { path: '/inline', element: <InlineTriangles data={data}/>, name: 'PageTwo' },
-    { path: '/third', element: <ThirdPage data={data}/>, name: 'PageThree' },
-    { path: '/bars', element: <BarGraph dataArr={[...data]}/>, name: 'PageFour' },
+    { path: '/inline', element: <InlineTriangles data={data}/>, name: 'Inline Triangles' },
+    { path: '/second', element: <SecondPage data={data}/>, name: 'PageTwo' },
+    { path: '/bars', element: <BarGraph dataArr={[...data]}/>, name: 'BarGraph' },
    
     { path: '/*', element: <ErrorPage data={data}/>, name: '404' },
   ]
