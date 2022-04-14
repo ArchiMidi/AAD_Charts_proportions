@@ -76,7 +76,9 @@ export default function BarGraph(props) {
                                 style={{
                                     width: `${100 * (100 * info.AADArtistsTotal / info.totalNumberOfExhibitions) / maxAmountOfExhibitions}%`,
                                     height: '30%',
-                                    backgroundColor: `hsl(90, 60%, 50%)`
+                                    backgroundColor: `hsl(90, 60%, 50%)`,
+                                    borderTopRightRadius: '0.8rem',
+                                    borderBottomRightRadius: '0.8rem',
                                 }}>
 
                             </div>
