@@ -1,5 +1,4 @@
 import React from 'react'
-import TrianglesYearsLine from '../components/TrianglesYearsLine'
 import { ReactComponent as Triangle } from "../assets/triangle.svg"
 
 
@@ -12,7 +11,7 @@ export default function InlineTriangles(props) {
   const dataArr = [...data]
   const totalYears = 28
   return (
-    <div className='secondContainer'>
+    <div>
       {Array(28).map((el, i) => {
         return (
           <p key={1998 + i}
