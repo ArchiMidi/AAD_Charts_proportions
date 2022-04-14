@@ -5,23 +5,21 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 
-import Calendar from './pages/Calendar';
 import InlineTriangles from './pages/InlineTriangles';
-import SecondPage from './pages/SecondPage';
-import BarGraph from './pages/BarGraph';
+import HomePage from './pages/HomePage';
 import ErrorPage from './pages/ErrorPage';
 
 function App() {
  const data = dataMap()
+ const dataArr = [...data]
   const location = useLocation();
   const routes = [
-    { path: '/', element: <Calendar data={data}/>, name: 'Home' },
+    { path: '/', element: <HomePage dataArr={dataArr}/>, name: 'Home' },
     { path: '/inline', element: <InlineTriangles data={data}/>, name: 'Inline Triangles' },
-    { path: '/second', element: <SecondPage data={data}/>, name: 'PageTwo' },
-    { path: '/bars', element: <BarGraph dataArr={[...data]}/>, name: 'BarGraph' },
    
     { path: '/*', element: <ErrorPage data={data}/>, name: '404' },
   ]
+
   return (
     <div className={"App "}>
      
