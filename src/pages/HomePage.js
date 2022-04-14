@@ -14,8 +14,8 @@ export default function HomePage(props) {
         return "1fr" + dataArr.map((el, i) => '1fr ').join('')
     }
 
-    function calculateTriangleSide(area) {
-        return Math.sqrt(4 * area / 1.7320508075688772) * 10
+    function calculateTriangleSide(val) {
+        return Math.sqrt(val / 1.7320508075688772)
     }
 
     return (
@@ -49,33 +49,38 @@ export default function HomePage(props) {
                             gridColumn: 2,
                             gridRow: i + 2,
                             width: '100%',
-                            
+
                         }}
                         key={i + 'chart'}
                     >
                         <div className='chartLine' />
-                        
 
-                            {info.yearsValues.map((val, i) => {
-                                return (
-                                    <Triangle
-                                        key={name + val + i}
-                                        width={(val !== 0 ? calculateTriangleSide(10) : 10)}
-                                        style={{
-                                            position: 'absolute',
-                                            left: `${i * 3}rem`,
-                                            borderLeft: '1px solid pink',
-                                            bottom: (val !== 0 ? "0rem" : -10),
-                                            stroke: 'white',
-                                            strokeWidth: '0.08rem',
-                                            strokeLinejoin: 'round',
-                                            fill: val === 0 && "red",
-                                            transform: val === 0 && 'scaleY(-1)'
 
-                                        }} />
-                                )
-                            })}
-                        
+                        {info.yearsValues.map((val, i) => {
+                            const isNumeric = typeof val === 'number'
+                            const area = 300 * val;
+                            const side = !isNumeric || val === 0 ? 10 : calculateTriangleSide(area)
+                            const height = side * 1.7320508075688772 / 2
+                            return (
+
+                                <Triangle
+                                    key={name + val + i}
+                                    width={side + 'px'}
+                                    style={{
+                                        position: 'absolute',
+                                        left: `${i * 6}vh`,
+                                        borderLeft: isNumeric && val > 0 && '1px solid pink',
+                                        top: `calc(50% - ${val !== 0 && isNumeric ?  height : -1}px - 0.14rem)`,
+                                        stroke: isNumeric && 'red',
+                                        strokeWidth: '0.1rem',
+                                        strokeLinejoin: 'round',
+                                        fill: val === 0 ? "red" : isNumeric ? 'black' : '#00000000',
+                                        transform: val === 0 && 'scaleY(-1)'
+
+                                    }} />
+                            )
+                        })}
+
                     </div>
                 )
             })}

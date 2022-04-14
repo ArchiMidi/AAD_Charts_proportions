@@ -33,6 +33,7 @@
 
 .placeName {
   /* max-height: 1rem; */
+  text-align: left;
   text-overflow: ellipse;
   width: 100%;
   border-bottom: 0.1rem solid black;
@@ -40,8 +41,12 @@
 }
 
 .cityName{
+  width: 100%;
+  text-align: left;
   /* max-height: 1rem; */
   color: hsl(200, 40%, 30%);
+  /* font-size: 0.8rem; */
+  margin: 0.5rem
 }
 
 .chartBox{
