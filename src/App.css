@@ -45,6 +45,7 @@
 }
 
 .chartBox{
+  position: relative;
   background-color: aquamarine;
 }
 
