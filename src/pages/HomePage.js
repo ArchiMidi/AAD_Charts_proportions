@@ -8,7 +8,7 @@ export default function HomePage(props) {
     const { dataArr } = props
 
     const gridColumns = () => {
-        return '2fr 8fr'
+        return '3fr 8fr'
     }
     const gridRows = () => {
         return "1fr" + dataArr.map((el, i) => '1fr ').join('')
@@ -20,9 +20,8 @@ export default function HomePage(props) {
 
     return (
         <A4Container
-            dataArr={dataArr}
-            gridColumns={'2fr 8fr'}
-            gridRows={"1fr" + dataArr.map((el, i) => '1fr ').join('')} >
+            gridColumns={gridColumns()}
+            gridRows={gridRows()} >
 
             <p style={{
                 gridColumn: 2,
@@ -58,7 +57,7 @@ export default function HomePage(props) {
 
                         {info.yearsValues.map((val, i) => {
                             const isNumeric = typeof val === 'number'
-                            const area = 300 * val;
+                            const area = 500 * val;
                             const side = !isNumeric || val === 0 ? 10 : calculateTriangleSide(area)
                             const height = side * 1.7320508075688772 / 2
                             return (
@@ -68,10 +67,10 @@ export default function HomePage(props) {
                                     width={side + 'px'}
                                     style={{
                                         position: 'absolute',
-                                        left: `${i * 6}vh`,
+                                        left: `${-20 + (i * 6.35)}vh`,
                                         borderLeft: isNumeric && val > 0 && '1px solid pink',
                                         top: `calc(50% - ${val !== 0 && isNumeric ?  height : -1}px - 0.14rem)`,
-                                        stroke: isNumeric && 'red',
+                                        stroke: isNumeric && 'white',
                                         strokeWidth: '0.1rem',
                                         strokeLinejoin: 'round',
                                         fill: val === 0 ? "red" : isNumeric ? 'black' : '#00000000',
