@@ -60,6 +60,7 @@ export default function mapArr() {
         // console.log(line[0], yearsValues)
         mapped.set(line[0], {
             city: line[1],
+            kindOfEvents: line[2],
             totalNumberOfExhibitions: sumMixedValuesArray([line[28], line[29], line[30], line[31]]),
             yearsValues,
             AADArtistsTotal: sumMixedValuesArray(yearsValues),
