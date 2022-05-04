@@ -5,7 +5,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Rectangles from './pages/Rectangles'
-import NewRectangles from './pages/NewRectangles'
+import Triangles from './pages/Triangles'
 import InlineTriangles from './pages/InlineTriangles';
 import HomePage from './pages/HomePage';
 import ErrorPage from './pages/ErrorPage';
@@ -17,8 +17,8 @@ function App() {
   const routes = [
     { path: '/', element: <HomePage dataArr={dataArr} />, name: 'Home' },
     { path: '/inline', element: <InlineTriangles data={data} />, name: 'Inline Triangles' },
-    { path: '/rect', element: <NewRectangles dataArr={dataArr} />, name: 'Rectangles' },
-    { path: '/oldrect', element: <Rectangles dataArr={dataArr} />, name: 'Rectangles' },
+    { path: '/tris', element: <Triangles dataArr={dataArr} />, name: 'Triangles' },
+    { path: '/rect', element: <Rectangles dataArr={dataArr} />, name: 'Rectangles' },
 
     { path: '/*', element: <ErrorPage data={data} />, name: '404' },
   ]
