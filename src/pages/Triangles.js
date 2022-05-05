@@ -9,17 +9,35 @@ export default function Triangles(props) {
             const name = place[0];
             const info = place[1];
             return (
-                <Triangle
+                <div className='placeBox'
                     key={name + 'tri'}
-                    style={{
-                        width: '5rem',
-                        transform: index % 2 === 0 && 'scaleY(-1)',
-                        stroke: 'red',
-
-                }} />
+                >
+                    <p className='placeTitle'>
+                        {name} <small>{info.city}</small> 
+                        <b>{info.AADArtistsTotal} artists</b>  over 
+                        <b> {info.totalNumberOfExhibitions} {info.kindOfEvents}</b> in
+                        <b> {info.yearsWithDataAmount} </b> years
+                    </p>
+                    <div className='trisBox'>
+                    {
+                        makeBackgroundTriangles(index)}
+                    </div>
+                </div>
             )
         }
         )}
         </div>
     )
 }
+function makeBackgroundTriangles(index) {
+    return <Triangle className='singleTriangle'
+
+        style={{
+            height: '2rem',
+            transform: index % 2 === 0 && 'scaleY(-1)',
+            stroke: 'white',
+            position: 'absolute',
+            left: index * 1.8 + 'rem'
+        }} />;
+}
+
