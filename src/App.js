@@ -6,6 +6,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Rectangles from './pages/Rectangles'
 import Triangles from './pages/Triangles'
+import Squares from './pages/Squares'
 import InlineTriangles from './pages/InlineTriangles';
 import HomePage from './pages/HomePage';
 import ErrorPage from './pages/ErrorPage';
@@ -18,6 +19,7 @@ function App() {
     { path: '/', element: <HomePage dataArr={dataArr} />, name: 'Home' },
     { path: '/inline', element: <InlineTriangles data={data} />, name: 'Inline Triangles' },
     { path: '/tris', element: <Triangles dataArr={dataArr} />, name: 'Triangles' },
+    { path: '/squares', element: <Squares dataArr={dataArr} />, name: 'Squares' },
     { path: '/rect', element: <Rectangles dataArr={dataArr} />, name: 'Rectangles' },
 
     { path: '/*', element: <ErrorPage data={data} />, name: '404' },

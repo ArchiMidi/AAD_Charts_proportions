@@ -14,13 +14,14 @@ export default function Triangles(props) {
                 >
                     <p className='placeTitle'>
                         {name} <small>{info.city}</small> 
-                        <b>{info.AADArtistsTotal} artists</b>  over 
+                        <b> {info.AADArtistsTotal} artists</b>  over 
                         <b> {info.totalNumberOfExhibitions} {info.kindOfEvents}</b> in
                         <b> {info.yearsWithDataAmount} </b> years
+                        {info.yearsValues.map((el)=> ` ${el} -`)}
                     </p>
                     <div className='trisBox'>
                     {
-                        makeBackgroundTriangles(index)}
+                        makeBackgroundTriangles(index, info.totalNumberOfExhibitions, info.yearsValues)}
                     </div>
                 </div>
             )
@@ -29,8 +30,10 @@ export default function Triangles(props) {
         </div>
     )
 }
-function makeBackgroundTriangles(index) {
-    return <Triangle className='singleTriangle'
+function makeBackgroundTriangles(index, totalNumberOfExhibitions, yearsValues) {
+    return new Array(totalNumberOfExhibitions).map(() => {
+    return(
+    <Triangle className='singleTriangle'
 
         style={{
             height: '2rem',
@@ -38,6 +41,8 @@ function makeBackgroundTriangles(index) {
             stroke: 'white',
             position: 'absolute',
             left: index * 1.8 + 'rem'
-        }} />;
+        }} />
+        )
+    })
 }
 
