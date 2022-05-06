@@ -17,13 +17,14 @@ export default function Squares(props) {
                         <b> {info.AADArtistsTotal} artists</b>  over
                         <b> {info.totalNumberOfExhibitions} {info.kindOfEvents}</b> in
                         <b> {info.yearsWithDataAmount} </b> years
-                        {info.yearsValues.map((el) => ` ${el} -`)}
+                        {info.yearsValues.map((el) => typeof el !== 'number' ? `${el} - ` : `area ${el} : side ` + Math.sqrt(4 * el / Math.sqrt(3)) + ' - ')}
+  })}
                     </p>
-                    <div className='squaresBox' 
-                    style={{height:  Math.floor(info.totalNumberOfExhibitions / 10 ) * 2 + 2 + 'rem'}}
+                    <div className='squaresBox'
+                        style={{ height: Math.floor(info.totalNumberOfExhibitions / 10) * 2 + 2 + 'rem' }}
                     >
-                        {
-                            makeBackgroundSquares(info.totalNumberOfExhibitions, info.yearsValues)}
+                        {makeBackgroundSquares(info.totalNumberOfExhibitions, info.yearsValues)}
+                        {makeIslandsSquares(info.AADArtistsTotal, info.yearsValues)}
                     </div>
                 </div>
             )
@@ -32,10 +33,10 @@ export default function Squares(props) {
         </div>
     )
 }
-function makeBackgroundSquares(totalNumberOfExhibitions, yearsValues) {
-    // return new Array(totalNumberOfExhibitions).map(() => {
-    const arr =  Array(totalNumberOfExhibitions).fill('')
-    return ( arr.map((el, i) => {
+function makeBackgroundSquares(AADArtistsTotal, yearsValues) {
+    // return new Array(AADArtistsTotal).map(() => {
+    const arr = Array(AADArtistsTotal).fill('')
+    return (arr.map((el, i) => {
         return (
 
 
@@ -47,12 +48,34 @@ function makeBackgroundSquares(totalNumberOfExhibitions, yearsValues) {
                     border: '0.1rem solid black',
                     position: 'absolute',
                     left: i % 10 * 2 + 'rem',
-                    top: Math.floor(i / 10 )* 2 + 'rem'
+                    top: Math.floor(i / 10) * 2 + 'rem'
                 }} />
         )
     }
     )
     )
-    // })
+}
+function makeIslandsSquares(totalNumberOfExhibitions, yearsValues) {
+    // return new Array(totalNumberOfExhibitions).map(() => {
+    const arr = Array(totalNumberOfExhibitions).fill('')
+    return (arr.map((el, i) => {
+        return (
+
+
+            <div
+                style={{
+                    height: '1.8rem',
+                    width: '1.8rem',
+                    backgroundColor: 'lightblue',
+                    border: '0.1rem solid black',
+                    position: 'absolute',
+                    left: 24 + i % 10 * 2 + 'rem',
+                    top: Math.floor(i / 10) * 2 + 'rem'
+                }} />
+        )
+    }
+    )
+    )
+
 }
 
